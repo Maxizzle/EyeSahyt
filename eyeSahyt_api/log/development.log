@@ -717,3 +717,26 @@ Processing by StoresController#index as */*
 Completed 200 OK in 45ms (Views: 0.1ms | ActiveRecord: 26.3ms | Allocations: 8322)
 
 
+Started GET "/stores" for 127.0.0.1 at 2020-01-13 17:57:32 -0500
+Processing by StoresController#index as */*
+  [1m[36mStore Load (1.0ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/controllers/stores_controller.rb:8:in `index'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = $1[0m  [["store_id", 1]]
+  ↳ app/controllers/stores_controller.rb:8:in `index'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = $1[0m  [["store_id", 2]]
+  ↳ app/controllers/stores_controller.rb:8:in `index'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = $1[0m  [["store_id", 3]]
+  ↳ app/controllers/stores_controller.rb:8:in `index'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = $1[0m  [["store_id", 4]]
+  ↳ app/controllers/stores_controller.rb:8:in `index'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = $1[0m  [["store_id", 5]]
+  ↳ app/controllers/stores_controller.rb:8:in `index'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = $1[0m  [["store_id", 6]]
+  ↳ app/controllers/stores_controller.rb:8:in `index'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = $1[0m  [["store_id", 7]]
+  ↳ app/controllers/stores_controller.rb:8:in `index'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = $1[0m  [["store_id", 8]]
+  ↳ app/controllers/stores_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 0.5ms | ActiveRecord: 2.4ms | Allocations: 8407)
+
+
