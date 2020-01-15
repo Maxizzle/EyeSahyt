@@ -39,6 +39,8 @@ class StoresController < ApplicationController
   # DELETE /stores/1
   def destroy
     @store.destroy
+    # puts 'paramsid', params[:id]
+    # @store = Store.where(name: params[:id])
   end
 
   private
