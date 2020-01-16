@@ -15,13 +15,13 @@ class StoresController < ApplicationController
 
   # POST /stores
   def create
-    puts 'storeparams', store_params
+    puts 'store params', store_params
     @store = Store.new(store_params)
-    puts 'store', @store.name, @store.image
+    puts 'store', @store.name, @store.image_url
     
 
     if @store.save
-      render json: @store, status: :created
+      render json: @store, status: :created, location: @store
     else
       render json: @store.errors, status: :unprocessable_entity
     end
@@ -51,6 +51,6 @@ class StoresController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def store_params
-      params.permit(:name, :image, :address, :number)
+      params.permit(:name, :image_url, :address, :number)
     end
 end
