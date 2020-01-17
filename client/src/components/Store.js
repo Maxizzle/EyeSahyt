@@ -37,12 +37,12 @@ class Store extends React.Component {
     handleUpdateStore = (e, id) => {
         this.setState({
             updateClick: true,
-            updatedStoreData:{}
+            updatedStoreData: {}
         })
 
     }
-    updateStore = (e,id) => {
-        
+    updateStore = (e, id) => {
+
         e.preventDefault()
         const data = {
             name: this.state.business,
@@ -50,21 +50,21 @@ class Store extends React.Component {
             address: this.state.location,
             number: this.state.phone
         }
-      console.log('hi')
+        console.log('hi')
         axios.put(`/stores/${id}`, data)
-        .then(e=>{
-            // console.log(e)
-            this.setState({
-            updatedStoreData:{
-                business:e.data.name,
-                inventory: e.data.image_url,
-                location: e.data.address,
-                phone: e.data.number
-            },
-            formUpdated:true
-        })
-        })
-        
+            .then(e => {
+                // console.log(e)
+                this.setState({
+                    updatedStoreData: {
+                        business: e.data.name,
+                        inventory: e.data.image_url,
+                        location: e.data.address,
+                        phone: e.data.number
+                    },
+                    formUpdated: true
+                })
+            })
+
         //     .then(updatedStore => {
         //     })
         //     .catch(error => console.log(error))
@@ -72,9 +72,9 @@ class Store extends React.Component {
     }
     render() {
         console.log(this.state)
-        let form = this.state.updateClick && <Form handleChange={this.handleChange}/>
-        
-       
+        let form = this.state.updateClick && <Form handleChange={this.handleChange} />
+
+
         // let formData
         // if(this.props.location.fromCreatePage === true){
         //     console.log('there')
@@ -85,13 +85,14 @@ class Store extends React.Component {
             <div className='new-store'>
 
                 <h1>My store</h1>
-                {/* <img src={formData.inventory} /> */}
+                <img src={formData.inventory} />
                 <p>{formData.business}</p>
                 <p>{formData.location}</p>
                 <p>{formData.phone}</p>
+                <div className='update-button'>
+                    <button onClick={this.handleUpdateStore}>UPDATE</button>
+                </div>
                 <button onClick={() => this.handleDelete(formData.id)}>DELETE</button>
-                <button onClick={this.handleUpdateStore}>UPDATE</button>
-
                 {/* console.log(formData.id) */}
                 <form onSubmit={(e) => this.updateStore(e, formData.id)}>
                     {form}

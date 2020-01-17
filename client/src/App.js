@@ -12,6 +12,7 @@ import PageThree from './components/IntroPages/PageThree'
 import PageFour from './components/IntroPages/PageFour'
 import PageFive from './components/IntroPages/PageFive'
 import PageSix from './components/IntroPages/PageSix'
+import Footer from './components/Footer'
 
 class App extends React.Component {
   constructor(props) {
@@ -52,8 +53,6 @@ class App extends React.Component {
           <Route exact path="/pagefour" component={PageFour} />
           <Route exact path="/pagefive" component={PageFive} />
           <Route exact path="/pagesix" component={PageSix} />
-          
-
           <Route
             path="/home"
             render={(props) => <Home {...props} stores={this.state.stores} handleClick={this.handleClick} />}
@@ -62,14 +61,13 @@ class App extends React.Component {
             path='/home'
             render={(props) => <CreatePage {...props} click={this.state.click} iconType={this.state.iconType} />}
           />
-
           <Route
             path="/store"
-            render={(props) => <Store {...props} store={this.state.stores} handleDelete={this.handleDeleteStore} />  }
-            
+            render={(props) => <Store {...props} store={this.state.stores} handleDelete={this.handleDeleteStore} /> }   
           />
-
+        
         </Switch>
+        <Footer />
       </div>
     )
   };

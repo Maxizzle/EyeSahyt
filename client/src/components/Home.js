@@ -30,12 +30,14 @@ export default class Home extends Component {
 
             <div>
                 <Header />
-                <h3><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3></h3>
+                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
                 <div className='cards'>
                     {/* {cards} */}
                     <div className='business-card'>
-                        <img src={business} alt='building icon' style={{ width: '91px' }} onClick={() => this.handleClick('business')} />
+                        <img src={business} alt='building icon' style={{ width: '91px', color: '#fff' }} onClick={() => this.handleClick('business')} />
+                        
                     </div>
+                    
                     <div className='location-card'>
                         <img src={location} alt='location icon' style={{ width: '60px' }} onClick={() => this.handleClick('location')} />
                     </div>
@@ -44,7 +46,6 @@ export default class Home extends Component {
                     </div>
                     <div className='phone-card'>
                         <img src={phone} alt='phone icon' style={{ width: '60px' }} onClick={() => this.handleClick('phone')} />
-
                     </div>
 
                 </div>

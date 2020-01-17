@@ -8,14 +8,14 @@ font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
   widows: 100%;
-  background-color: #772CE5;
+  /* background-color: #772CE5; */
   z-index: 10;
 }
 
 .header nav{
-  /* border: 2px solid red; */
+  font-size: 20px;
   color: #FFF;
-  background-color: #4643CB;
+  background-color: #020060;
   display: flex;
   justify-content: space-around;
   height: 80px;
@@ -24,15 +24,26 @@ font-family: 'Roboto', sans-serif;
 
 
 .header h1{
+  font-family: 'Space Mono', monospace;
+  font-size: 45px;
+  font-weight: 900;
+  color:#FFF;
+  font-weight: 900;
   position: relative;
-  top: 2em;
+  top: 4.5em;
+  left:14em;
   margin: auto 0;
   margin: 0;
+
 }
 
+.header h3{
+  color: black;
+}
+
+
 .header img{
-  
-  margin: auto 0;
+  margin-top: -15px ;
   width: 100%;
   height: 60vh;
 }
@@ -70,11 +81,6 @@ font-family: 'Roboto', sans-serif;
   }
 }
 
-
-h1{
-  font-family: 'Space Mono', monospace;
-}
-
 h3{
   text-align: center;
   color: #4643CB;
@@ -95,6 +101,11 @@ h3{
  
 }
 
+.first-page footer{
+  display: flex;
+  justify-content: flex-end;
+}
+
 .second-page{
   display: flex;
   flex-direction: column;
@@ -103,7 +114,7 @@ h3{
 }
 
 .second-page img{
-  width: 100vh;
+  width: 90vh;
   align-self: center;
   
 }
@@ -162,7 +173,8 @@ h3{
 
 
 .cards .business-card img{
-border: 2px solid #020060;
+  background-color:#3936B7;
+/* border: 2px solid #020060; */
 border-radius: 5px;
 padding: 50%;
 
@@ -178,7 +190,8 @@ padding: 50%;
 }
 
 .cards .inventory-card img{
-  border: 2px solid #020060;
+  background-color: #3936B7;
+  /* border: 2px solid #020060; */
   border-radius: 5px;
   padding: 50%;
   
@@ -193,7 +206,8 @@ padding: 50%;
   }
 
   .cards .location-card img{
-    border: 2px solid #020060;
+    background-color:#3936B7;
+    /* border: 2px solid #020060; */
     border-radius: 5px;
     padding: 50%;
     
@@ -209,7 +223,8 @@ padding: 50%;
     }
 
   .cards .phone-card img{
-      border: 2px solid #020060;
+    background-color: #3936B7;
+      
       border-radius: 5px;
       /* box-shadow: 5px 5px 5px 5px gray; */
       padding: 50%;
@@ -224,15 +239,27 @@ padding: 50%;
         opacity: 1;
       }
 
-      form{
+      .form form{
         position: absolute;
-        top: 61em;
+        top: 70em;
         left: 50%;
         transform: translate(-50%,-50%);
         background: #020060;
         padding: 100px;
         /* border: 2px solid #fff; */
       }
+
+      .new-store form{
+        position: absolute;
+        top: 90em;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #020060;
+        padding: 100px;
+        /* border: 2px solid #fff; */
+      }
+
+
       
       label{
        font-family: sans-serif;
@@ -282,7 +309,7 @@ padding: 50%;
       }
 
       .new-store{
-        border: 2px solid red;
+        /* border: 2px solid red; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -291,24 +318,46 @@ padding: 50%;
 
       .new-store button{
         background: transparent;
+        background-color: red;
         color: #FFF;
         font-family: sans-serif;
         text-transform: uppercase;
         letter-spacing: 3px;
         margin: 20px 0;
         padding: 10px 30px;
-        border: 2px solid red;
+        /* border: 2px solid red; */
         border-radius: 4px;
         
       }
 
       .new-store button:hover{
-        background: red;
+        /* background-color: red; */
         border: 2px solid rgba(69, 39, 160, .4);
+      }
+
+      .new-store .update-button button{
+        background-color:#020060;
+
       }
 
       .new-store p {
         font-weight: 900;
         font-size: larger;
+      }
+
+      .new-store img{
+        width: 50%;
+      }
+
+      .footer{
+        font-size: 20px;
+        font-weight: 900;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 500px;
+        display: flex;
+        flex-direction: column;
+        color: #FFF;
+        background-color: #020060;
+        height: 200px;
       }
 

@@ -34,7 +34,7 @@ export default class CreatePage extends Component {
 
         // console.log(data)
         
-        await axios.post("https://eyesahyt.herokuapp.com/stores", data)
+        await axios.post("http://localhost:3000/stores", data)
             .then(e => {
                 console.log(e.data)
                 this.setState({
@@ -42,7 +42,6 @@ export default class CreatePage extends Component {
                     id: e.data.id
 
                 })
-
             })
 
 
@@ -57,30 +56,17 @@ export default class CreatePage extends Component {
         // console.log(this.state)
         let click = this.props.click ? 'block' : 'none'
         // console.log(click)
-        // let values = ['business', 'location', 'inventory', 'phone']
-        // let style
-        // console.log('hithere', this.state.value)
-        // let formFields = values.map(e => {
-        //     style = e === this.props.iconType ? '1px solid #fff' : '#4643CB'
-        //     return <input style={{ border: style }} type='text' value={this.state.e} placeholder={e} onChange={this.handleChange} name={e} />
-
-
-        // })
         // console.log(this.state.click)
         return (
             <div style={{ display: click }} className='form'>
 
-                <form onSubmit={this.handleSubmit}>
-                    {/* <label>{this.e}</label> */}
-                    {/* {formFields} */}
-                    <button>Submit</button>
+                <form onSubmit={this.handleSubmit}> 
                     <Form 
                     click={this.state.click}
                     formData={this.state}
                     handleChange={this.handleChange}
-                    
-                    
                     />
+                    <button>Submit</button>
                 </form>
 
             </div>
